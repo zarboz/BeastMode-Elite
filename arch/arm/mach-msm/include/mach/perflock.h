@@ -69,9 +69,15 @@ static inline void perf_lock_init(struct perf_lock *lock,
 	unsigned int level, const char *name) { return; }
 static inline void perf_lock_init_v2(struct perf_lock *lock,
 	unsigned int level, const char *name) { return; }
-static inline void perf_lock(struct perf_lock *lock) { return; }
-static inline void perf_unlock(struct perf_lock *lock) { return; }
-static inline int is_perf_lock_active(struct perf_lock *lock) { return 0; }
+//static inline void perf_lock(struct perf_lock *lock) { return; }
+//static inline void perf_unlock(struct perf_lock *lock) { return; }
+//static inline int is_perf_lock_active(struct perf_lock *lock) { return 0; }
+extern void perf_lock(struct perf_lock *lock);
+extern void perf_unlock(struct perf_lock *lock);
+extern int is_perf_lock_active(struct perf_lock *lock);
+
+
+
 static inline int is_perf_locked(void) { return 0; }
 static inline void perflock_scaling_max_freq(unsigned int freq, unsigned int cpu) { return; }
 static inline void perflock_scaling_min_freq(unsigned int freq, unsigned int cpu) { return; }

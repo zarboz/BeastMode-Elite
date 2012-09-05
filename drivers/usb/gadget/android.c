@@ -89,9 +89,6 @@
 #ifdef CONFIG_USB_ANDROID_ECM
 #include "f_ecm.c"
 #endif
-#ifdef CONFIG_USB_ETH_PASS_FW
-#include "passthru.c"
-#endif
 #include "u_ether.c"
 #ifdef CONFIG_USB_ANDROID_USBNET
 #include "f_usbnet.c"
